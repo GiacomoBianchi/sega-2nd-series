@@ -110,6 +110,8 @@ else if ( my_config["bgs_opt"] == "FULL SCREEN") background.preserve_aspect_rati
 else if ( my_config["bgs_opt"] == "FULL SCREEN KEEP ASPECT") background.preserve_aspect_ratio = true;
 if ( my_config["bac_opt"] == "SCREENSHOT" ) background.video_flags = Vid.ImagesOnly;
 animation.add( PropertyAnimation( background, { when=Transition.ToNewList, property="alpha", start=0, end=255, time=ant*2 }));
+animation.add( PropertyAnimation( background, { when=Transition.ToNewSelection, property="alpha", start=0, end=255, time=1 }));
+animation.add( PropertyAnimation( background, { when=Transition.ToNewSelection, property="alpha", start=255, end=55, time=ant*2, delay=exd }));
 
 switch ( my_config["sca_opt"] ) {
 	case "ALWAYS":
